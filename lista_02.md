@@ -332,7 +332,7 @@ while dirige == true:
     if velocidade maior ou igual a 0 e menor que 1:
         velocidade = aceleracao_constante
 
-    if velocidade maior que 1 e menor que velocidade_max:
+    if velocidade maior ou igual a 1 e menor que velocidade_max:
         velocidade = aceleracao_constante*tempo
             if velocidade maior que velocidade_max:
                 velocidade = velocidade_max
