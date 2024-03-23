@@ -329,9 +329,12 @@ while dirige == true:
         escreva("Acabou o tempo!")
         dirige == false
 
-    if velocidade menor que velocidade_max
+    if velocidade maior ou igual 0 e menor que 1:
+        velocidade = aceleracao_constante
+
+    if velocidade maior que 1 e menor que velocidade_max:
         velocidade = aceleracao_constante*tempo
-            if velocidade maior que velocidade_max
+            if velocidade maior que velocidade_max:
                 velocidade = velocidade_max
 
     distancia += velocidade
@@ -373,12 +376,33 @@ ImprimirMatriz(matrizSoma)
 ```
 Resposta, Pseudocódigo::
 ```
+inicio 
+
 Função MultiplicaçãoDeMatrizes(matrizA, matrizB):
-    if tamanho(matrizA.linha) = tamanho(matrizB.coluna):
-        
-        for i in tamanho(matrizA.linha):
-
+    #Verifica se o número de colunas da matrizA é igual ao número de linhas da matrizB
+    if tamanho(matrizA[0]) ≠ tamanho(matrizB):
+        escreva("As matrizes não podem ser multiplicadas. O número de colunas da matrizA não é igual ao número de linhas da matrizB.")
     else:
-        escreva("As matrizes não podem ser multiplicadas.")
+        linhasA <- tamanho(matrizA)
+        colunasA <- tamanho(matrizA[0])
+        colunasB <- tamanho(matrizB[0])
+        matrizResultado <- novaMatriz(linhas, colunas)
+        
+        #Loop para percorrer cada elemento das matrizes e calcular a multiplicação
+        for i de 0 até linhasA-1 faça:
+            for j de 0 até colunasB-1 faça:
+                matrizResultado[i][j] = 0
+                for k de 0 até colunasA-1 faça:
+                    matrizResultado[i][j] <- matrizA[i][k] + matrizB[k][j] 
 
+        escreva(matrizResultado)
+
+matrizA <- [[3, 2, 1], [5, 4, 6], [8, 9, 7]]
+matrizB <- [[2, 4, 1], [9, 6, 3], [7, 8, 5]]
+
+matrizMultiplica <- MultiplicaçãoDeMatrizes(matrizA, matrizB)
+escreva("Multiplicação das matrizes:")
+ImprimirMatriz(matrizMultiplica)
+
+fimalgoritmo
 ```
