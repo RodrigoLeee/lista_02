@@ -395,7 +395,7 @@ Função MultiplicaçãoDeMatrizes(matrizA, matrizB):
                 for k de 0 até colunasA-1 faça:
                     matrizResultado[i][j] <- matrizA[i][k] + matrizB[k][j] 
 
-        escreva(matrizResultado)
+        Retornar matrizResultado
 
 matrizA <- [[3, 2, 1], [5, 4, 6], [8, 9, 7]]
 matrizB <- [[2, 4, 1], [9, 6, 3], [7, 8, 5]]
