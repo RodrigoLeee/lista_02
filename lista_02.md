@@ -137,7 +137,7 @@ B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensage
 
 C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
-D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".
+**D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!". [Resposta: D]**
 
 
 ______
@@ -201,17 +201,17 @@ Compra 3 aprovada. Saldo restante: 400
 Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 
-D)
+**D) [Resposta: D]**
 
-Compra 1 aprovada. Saldo restante: 800
+**Compra 1 aprovada. Saldo restante: 800**
 
-Compra 2 aprovada. Saldo restante: 0
+**Compra 2 aprovada. Saldo restante: 0**
 
-Compra 3 aprovada com limite de crédito. Saldo restante: 200
+**Compra 3 aprovada com limite de crédito. Saldo restante: 200**
 
-Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
+**Compra 4 negada. Saldo insuficiente e limite de crédito excedido.**
 
-Compra 5 negada. Saldo insuficiente e limite de crédito excedido.
+**Compra 5 negada. Saldo insuficiente e limite de crédito excedido.**
 
 ______
 
@@ -221,7 +221,7 @@ Escolha a opção que responde corretamente:
 
 A) Setup -> Update -> Draw
 
-B) Preload -> Create -> Update
+**B) Preload -> Create -> Update [Respsota: B]**
 
 C) Load -> Initialize -> Render
 
@@ -234,7 +234,7 @@ Escolha a opção que responde corretamente:
 
 A) Renderizar gráficos 3D para jogos em HTML5.
 
-B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
+**B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D. [Resposta: B]**
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
@@ -246,6 +246,23 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
+#### Resposta, Pseudocódigo:
+```
+inicio
+
+real idade = leia('Insira sua idade');
+
+if idade menor que 16
+	escreva('Não pode votar!')
+else
+	if idade maior ou igual que 16 && menor que 18
+		escreva('Voto facultativo!')
+	else
+		escreva('Voto obrigatório')
+
+fimalgoritmo
+```
+
 ______
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
@@ -262,16 +279,72 @@ Classe FormaGeometrica:
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
 
 ```
+#### Resposta, Pseudocódigo:
+```
+inicio
 
+Classe Retangulo extends FormaGeometrica:
+    Atributos:
+        - cor
+        - altura
+        - largura
+
+    Método Construtor(cor, altura, largura):
+        super(cor).
+        Define o valor do atributo altura com o valor passado como parâmetro.
+        Define o valor do atributo largura com o valor passado como parâmetro.
+
+    Método CalcularArea():
+        escreva(altura*largura)
+
+Classe Circulo extends FormaGeometrica:
+    Atributos:
+        - cor
+        - pi
+        - raio
+
+    Método Construtor(cor, raio):
+        super(cor).
+        Define o valor da constante pi.
+        Define o valor do atributo raio com o valor passado como parâmetro.
+
+    Método CalcularArea():
+        escreva(pi*(raio^2))
+
+fimalgoritmo
+```
 ______
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
 
+```
+lógico dirige;
+real tempo_max, tempo, distancia_max, distancia, velocidade_max, velocidade, aceleracao_constante;
 
+while dirige == true:
+    if distancia maior ou igual a distancia_max:
+        escreva("Percorreu a determinada distância!")
+        dirige == false
+    if tempo maior ou igual a tempo_max:
+        escreva("Acabou o tempo!")
+        dirige == false
+
+    if velocidade menor que velocidade_max
+        velocidade = aceleracao_constante*tempo
+            if velocidade maior que velocidade_max
+                velocidade = velocidade_max
+
+    distancia += velocidade
+    tempo += 1
+
+escreva("Foram percorridos:" distancia "metros, durante:" tempo "minutos")
+
+fimalgoritmo
+```
 
 ______
 
-**10)** Uma matriz é uma coleção bidimensional de elementos, organizados em linhas e colunas. A seguir, é fornecida a implementação da função SomaDeMatrizes(matrizA, matrizB), que calcula a soma de duas matrizes. Sua tarefa é implementar uma função semelhante, porém que realize a multiplicação de duas matrizes.
+**10)** Uma matriz é uma coleção bidimensional de elementos, organizados em linhas e colunas. A seguir, é fornecida a implementação da função SomaDeMatrizes(matrizA, matrizB), que calcula a soma de duas matrizes. Sua tarefa é implementar uma função semelhante, porém que realize a multiplicação de duas matrizes. 
 
 ```
 Função SomaDeMatrizes(matrizA, matrizB):
@@ -297,4 +370,15 @@ matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+```
+Resposta, Pseudocódigo::
+```
+Função MultiplicaçãoDeMatrizes(matrizA, matrizB):
+    if tamanho(matrizA.linha) = tamanho(matrizB.coluna):
+        
+        for i in tamanho(matrizA.linha):
+
+    else:
+        escreva("As matrizes não podem ser multiplicadas.")
+
 ```
