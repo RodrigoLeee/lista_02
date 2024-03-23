@@ -329,7 +329,7 @@ while dirige == true:
         escreva("Acabou o tempo!")
         dirige == false
 
-    if velocidade maior ou igual 0 e menor que 1:
+    if velocidade maior ou igual a 0 e menor que 1:
         velocidade = aceleracao_constante
 
     if velocidade maior que 1 e menor que velocidade_max:
