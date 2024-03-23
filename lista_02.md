@@ -250,14 +250,14 @@ ______
 ```
 inicio
 
-real idade = leia('Insira sua idade');
+real idade = leia('Insira sua idade')
 
-if idade menor que 16
+if idade menor que 16:
 	escreva('Não pode votar!')
-else
-	if idade maior ou igual que 16 && menor que 18
+else:
+	if idade maior ou igual que 16 && menor que 18:
 		escreva('Voto facultativo!')
-	else
+	else:
 		escreva('Voto obrigatório')
 
 fimalgoritmo
